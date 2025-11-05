@@ -3,48 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marcos - Site Pessoal</title>
+    <title>Marcos - Minimalista</title>
 
     <style>
-        /* Define a fonte e remove margem padrão do corpo do site */
+        /* 1. Estilo Minimalista Básico */
         body {
-            font-family: Arial, sans-serif; /* Mude para sua fonte preferida */
+            font-family: 'Helvetica Neue', Arial, sans-serif; /* Fonte moderna e limpa */
+            background-color: #ffffff; /* Fundo branco puro */
+            color: #1a1a1a; /* Texto preto quase puro */
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9; /* Cor de fundo suave (cinza claro) */
-            color: #333; /* Cor do texto principal */
-            text-align: center; /* Centraliza todo o conteúdo */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Centraliza verticalmente */
+            align-items: center; /* Centraliza horizontalmente */
+            min-height: 100vh; /* Ocupa a altura total da tela */
+            text-align: center;
         }
 
-        /* Estiliza o cabeçalho principal */
+        /* 2. Estilo dos Títulos (Ênfase) */
         h1 {
-            color: #2c3e50; /* Cor azul escuro para o título principal */
-            padding-top: 50px; /* Espaço no topo */
-            margin-bottom: 5px; /* Espaço pequeno após o título */
+            font-size: 3em;
+            margin-bottom: 0.1em;
+            letter-spacing: -1px; /* Tira um pouco o espaço entre letras */
+            color: #3498db; /* Cor de destaque (Azul) */
         }
 
-        /* Estiliza o subtítulo */
         h2 {
-            color: #3498db; /* Cor azul brilhante para o subtítulo */
-            font-weight: normal; /* Deixa o texto menos pesado */
+            font-size: 1.2em;
+            font-weight: 300; /* Leve para o estilo minimalista */
+            color: #7f8c8d; /* Cor cinza suave */
             margin-top: 0;
-            padding-bottom: 30px;
+            margin-bottom: 30px;
         }
 
-        /* Remove a tag <center> e centraliza usando o body (melhor prática) */
-        /* Esta regra não é estritamente necessária se você usar o body { text-align: center; } */
-        /* .container {
-            width: 80%;
-            margin: 0 auto;
-        } */
+        /* 3. Animações CSS (Deixando Animado) */
+        
+        /* Animação de Fade-in (os elementos aparecem suavemente) */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animated-content {
+            opacity: 0; /* Começa invisível */
+            animation: fadeIn 0.8s ease-out forwards; /* Aplica a animação */
+        }
+
+        /* Aplica a animação com atraso */
+        h1 {
+            animation-delay: 0.2s;
+        }
+
+        h2 {
+            animation-delay: 0.5s;
+        }
+
+        /* Efeito de interatividade em um novo elemento (ex: um botão/link) */
+        a {
+            color: #3498db;
+            text-decoration: none;
+            padding: 10px 15px;
+            border: 1px solid #3498db;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave */
+        }
+
+        a:hover {
+            background-color: #3498db; /* Muda o fundo ao passar o mouse */
+            color: #ffffff; /* Muda a cor do texto ao passar o mouse */
+        }
     </style>
-    </head>
+</head>
 <body>
     
-    <h1>Site Pessoal do Marcos</h1>
-    <h2>Aluno de Desenvolvimento Web</h2>
+    <div class="animated-content">
+        <h1>Site Vercel</h1>
+    </div>
     
-    <p>Olá! Este é meu primeiro projeto em HTML e CSS, hospedado na Vercel.</p>
+    <div class="animated-content">
+        <h2>Marcos Aluno</h2>
+    </div>
+
+    <div class="animated-content" style="animation-delay: 0.8s;">
+        <a href="#">Saiba Mais</a>
+    </div>
 
 </body>
-</html>
+</html>v
